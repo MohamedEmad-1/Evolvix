@@ -10,7 +10,9 @@ import {
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
-const HeroContent = () => {
+interface HeroContentProps {}
+
+const HeroContent: React.FC<HeroContentProps> = () => {
   return (
     <motion.div
       initial="hidden"

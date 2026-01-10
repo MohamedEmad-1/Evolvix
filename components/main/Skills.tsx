@@ -9,7 +9,9 @@ import React from "react";
 import SkillDataProvider from "../sub/SkillDataProvider";
 import SkillText from "../sub/SkillText";
 
-const Skills = () => {
+interface SkillsProps {}
+
+const Skills: React.FC<SkillsProps> = () => {
   return (
     <section
       id="skills"

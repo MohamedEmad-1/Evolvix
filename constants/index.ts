@@ -1,4 +1,16 @@
-export const Skill_data = [
+export interface Skill {
+  skill_name: string;
+  Image: string;
+  width: number;
+  height: number;
+}
+
+export interface Social {
+  name: string;
+  src: string;
+}
+
+export const Skill_data: Skill[] = [
     {
       skill_name: "Html 5",
       Image: "/html.png",
@@ -80,7 +92,7 @@ export const Skill_data = [
   
   ];
   
-  export const Socials = [
+  export const Socials: Social[] = [
     {
       name: "Discord",
       src: "/instagram.svg",
@@ -97,7 +109,7 @@ export const Skill_data = [
   
   
   
-  export const Frontend_skill = [
+  export const Frontend_skill: Skill[] = [
     {
       skill_name: "Html 5",
       Image: "/html.png",
@@ -160,7 +172,7 @@ export const Skill_data = [
     },
   ];
   
-  export const Backend_skill = [
+  export const Backend_skill: Skill[] = [
     {
       skill_name: "Node js",
       Image: "/node-js.png",
@@ -211,7 +223,7 @@ export const Skill_data = [
     },
   ];
   
-  export const Full_stack = [
+  export const Full_stack: Skill[] = [
     {
       skill_name: "React Native",
       Image: "/ReactNative .png",
@@ -242,7 +254,7 @@ export const Skill_data = [
   
   
   
-  export const Other_skill = [
+  export const Other_skill: Skill[] = [
     {
       skill_name: "Go",
       Image: "/go.png",

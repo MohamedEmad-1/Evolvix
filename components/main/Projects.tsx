@@ -1,7 +1,9 @@
 import React from "react";
 import ProjectCard from "../sub/ProjectCard";
 
-const Projects = () => {
+interface ProjectsProps {}
+
+const Projects: React.FC<ProjectsProps> = () => {
   return (
     <div
       className="flex flex-col items-center justify-center py-20"
