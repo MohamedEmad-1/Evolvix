@@ -1,10 +1,9 @@
 import React from "react";
 import {
-  RxDiscordLogo,
-  RxGithubLogo,
-  RxInstagramLogo,
-  RxTwitterLogo,
-  RxLinkedinLogo,
+    RxGithubLogo,
+    RxInstagramLogo,
+    RxTwitterLogo,
+    RxLinkedinLogo,
 } from "react-icons/rx";
 
 import { FaYoutube } from "react-icons/fa";
@@ -29,8 +28,8 @@ const Footer: React.FC<FooterProps> = () => {
                         <span className="text-[15px] ml-[6px]">Github</span>    
                     </p>
                     <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxDiscordLogo />
-                        <span className="text-[15px] ml-[6px]">Discord</span>    
+                        <RxLinkedinLogo />
+                        <span className="text-[15px] ml-[6px]">LinkedIn</span>    
                     </p>
                 </div>
                 <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
@@ -44,8 +43,8 @@ const Footer: React.FC<FooterProps> = () => {
                         <span className="text-[15px] ml-[6px]">Twitter</span>    
                     </p>
                     <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxDiscordLogo />
-                        <span className="text-[15px] ml-[6px]">Linkedin</span>    
+                        <RxTwitterLogo />
+                        <span className="text-[15px] ml-[6px]">Twitter</span>    
                     </p>
                 </div>
                 <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
@@ -66,7 +65,7 @@ const Footer: React.FC<FooterProps> = () => {
             </div>
 
             <div className="mb-[20px] text-[15px] text-center">
-                &copy; WebChain Dev 2023 Inc. All rights reserved
+                © 2025 Evolvix. All rights reserved
             </div>
         </div>
     </div>

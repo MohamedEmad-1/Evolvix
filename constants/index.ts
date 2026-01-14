@@ -93,18 +93,18 @@ export const Skill_data: Skill[] = [
   ];
   
   export const Socials: Social[] = [
-    {
-      name: "Discord",
-      src: "/instagram.svg",
-    },
-    {
-      name: "Facebook",
-      src: "/facebook.svg",
-    },
-    {
-      name: "Instagram",
-      src: "/discord.svg",
-    },
+      {
+        name: "LinkedIn",
+        src: "/linkedin.svg",
+      },
+      {
+        name: "Twitter",
+        src: "/twitter.svg",
+      },
+      {
+        name: "GitHub",
+        src: "/github.svg",
+      },
   ];
   
   
