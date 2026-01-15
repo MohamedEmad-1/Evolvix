@@ -6,7 +6,7 @@ interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
   return (
-    <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-brown-10/50 bg-darkb-90 backdrop-blur-md z-50 px-10">
+    <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-brown-10/50 bg-transparent backdrop-blur-md z-50 px-10">
       <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
         <a href="#about" className="h-auto w-auto flex flex-row items-center">
           <Image
@@ -22,8 +22,8 @@ const Navbar: React.FC<NavbarProps> = () => {
           </span>
         </a>
 
-        <div className="w-[500px] h-full flex flex-row items-center justify-between md:mr-20">
-          <div className="flex items-center justify-between w-full h-auto border border-brown-10 bg-darkb-90 mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
+        <div className="w-[500px] h-full flex flex-row items-center justify-center">
+          <div className="flex items-center justify-between w-full h-auto border border-brown-10 bg-darkb-90/60 mr-[15px] px-[20px] py-[10px] rounded-full text-white">
             <a href="#about" className="cursor-pointer">
               About
             </a>
