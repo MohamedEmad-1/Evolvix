@@ -93,18 +93,18 @@ export const Skill_data: Skill[] = [
   ];
   
   export const Socials: Social[] = [
-      {
-        name: "LinkedIn",
-        src: "/linkedin.svg",
-      },
-      {
-        name: "Twitter",
-        src: "/twitter.svg",
-      },
-      {
-        name: "GitHub",
-        src: "/github.svg",
-      },
+        {
+          name: "linkedIn",
+          src: "/linkedIn.svg",
+        },
+        {
+          name: "Instagram",
+          src: "/instagram.svg",
+        },
+        {
+          name: "YouTube",
+          src: "/youtube-svgrepo-com.svg",
+        },
   ];
   
   

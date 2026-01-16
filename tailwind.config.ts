@@ -26,7 +26,7 @@ const config: Config = {
   			},
   			red: {
   				'100': '#780000',
-  				DEFAULT: '#c1121f'
+  				'50': '#c1121f'
   			},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

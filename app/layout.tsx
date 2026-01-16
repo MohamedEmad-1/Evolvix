@@ -27,14 +27,14 @@ export default function RootLayout({
           className="fixed inset-0 w-full h-screen pointer-events-none"
           style={{ zIndex: -10 }}
           starSpeed={0.5}
-          density={0.8}
+          density={1}
           hueShift={340}
-          speed={0.8}
-          glowIntensity={0.10}
-          saturation={0.0}
+          speed={0.4}
+          glowIntensity={0.1}
+          saturation={0.4}
           mouseRepulsion
-          repulsionStrength={0.7}
-          twinkleIntensity={0.2}
+          repulsionStrength={0}
+          twinkleIntensity={0}
           rotationSpeed={0.1}
           transparent
         />

@@ -314,17 +314,35 @@ export default function Galaxy({
       targetMouseActive.current = 0.0;
     }
 
+    let useWindowListeners = false;
     if (mouseInteraction) {
-      ctn.addEventListener('mousemove', handleMouseMove);
-      ctn.addEventListener('mouseleave', handleMouseLeave);
+      try {
+        const pe = getComputedStyle(ctn).pointerEvents;
+        useWindowListeners = pe === 'none';
+      } catch (e) {
+        useWindowListeners = false;
+      }
+
+      if (useWindowListeners) {
+        window.addEventListener('mousemove', handleMouseMove);
+        window.addEventListener('mouseleave', handleMouseLeave);
+      } else {
+        ctn.addEventListener('mousemove', handleMouseMove);
+        ctn.addEventListener('mouseleave', handleMouseLeave);
+      }
     }
 
     return () => {
       cancelAnimationFrame(animateId);
       window.removeEventListener('resize', resize);
       if (mouseInteraction) {
-        ctn.removeEventListener('mousemove', handleMouseMove);
-        ctn.removeEventListener('mouseleave', handleMouseLeave);
+        if (useWindowListeners) {
+          window.removeEventListener('mousemove', handleMouseMove);
+          window.removeEventListener('mouseleave', handleMouseLeave);
+        } else {
+          ctn.removeEventListener('mousemove', handleMouseMove);
+          ctn.removeEventListener('mouseleave', handleMouseLeave);
+        }
       }
       ctn.removeChild(gl.canvas);
       gl.getExtension('WEBGL_lose_context')?.loseContext();
