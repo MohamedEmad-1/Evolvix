@@ -36,9 +36,9 @@ const HeroContent: React.FC<HeroContentProps> = () => {
         >
                 <span>
               {"Don't Just Go Online"}
-          <span className="text-transparent bg-clip-text bg-gradient from-brown-10 to-red-50">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white-20 via-brown-10 to-red-50">
             {" "}
-            {"\"Dominate\""}
+            {"Dominate!"}
           </span>
         </span>
         </motion.div>
