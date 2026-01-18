@@ -1,9 +1,34 @@
-import type { Metadata } from "next";
+<div className="fixed inset-0 z-10 pointer-events-none">
+          <Particles
+            particleCount={20}
+            particleSpread={2}
+            speed={0.1}
+            particleColors={["#fff9d9","#eea83e","#c95508"]}
+            moveParticlesOnHover={false}
+            particleHoverFactor={0}
+            alphaParticles={false}
+            particleBaseSize={80}
+            sizeRandomness={1}
+            cameraDistance={5}
+            disableRotation={false}
+          />
+        </div>
+
+
+
+
+
+
+
+
+
+
+        import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
-import Particles from "@/components/Particles";
+import { StarsCanvas } from "@/components/main/StarBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,22 +47,8 @@ export default function RootLayout({
      <body
         className={`${inter.className} bg-gradient-to-b from-[#090201] from-0% to-darkb-100 to-30% overflow-y-scroll overflow-x-hidden`}
       >
-        <div className="relative">
-          <div className="fixed inset-0 z-10 pointer-events-none">
-          <Particles
-            particleCount={30}
-            particleSpread={3}
-            speed={0.1}
-            particleColors={["#fff9d9","#eea83e","#c95508"]}
-            moveParticlesOnHover={false}
-            particleHoverFactor={0}
-            alphaParticles={false}
-            particleBaseSize={80}
-            sizeRandomness={1}
-            cameraDistance={5}
-            disableRotation={false}
-          />
-        </div>
+        <div className="relative z-20">
+          <StarsCanvas />
           <Navbar />
           {children}
           <Footer />

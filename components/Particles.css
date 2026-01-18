@@ -1,0 +1,10 @@
+.particles-container {
+  /* Force full-viewport sizing so particles always fill the screen
+     regardless of parent layout or load timing. */
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+}

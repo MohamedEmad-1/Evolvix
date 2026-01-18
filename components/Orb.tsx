@@ -8,6 +8,9 @@ interface OrbProps {
   rotateOnHover?: boolean;
   forceHoverState?: boolean;
   backgroundColor?: string;
+  color1?: string;
+  color2?: string;
+  color3?: string;
 }
 
 export default function Orb({
@@ -15,7 +18,10 @@ export default function Orb({
   hoverIntensity = 0.2,
   rotateOnHover = true,
   forceHoverState = false,
-  backgroundColor = '#080100'
+  backgroundColor = '#080100',
+  color1 = '#9c43f0',
+  color2 = '#4cc2e9',
+  color3 = '#0f1399'
 }: OrbProps) {
   const ctnDom = useRef<HTMLDivElement>(null);
 
@@ -40,6 +46,9 @@ export default function Orb({
     uniform float rot;
     uniform float hoverIntensity;
     uniform vec3 backgroundColor;
+    uniform vec3 baseColor1;
+    uniform vec3 baseColor2;
+    uniform vec3 baseColor3;
     varying vec2 vUv;
 
     vec3 rgb2yiq(vec3 c) {
@@ -109,9 +118,6 @@ export default function Orb({
       return vec4(colorIn.rgb / (a + 1e-5), a);
     }
     
-    const vec3 baseColor1 = vec3(0.611765, 0.262745, 0.996078);
-    const vec3 baseColor2 = vec3(0.298039, 0.760784, 0.913725);
-    const vec3 baseColor3 = vec3(0.062745, 0.078431, 0.600000);
     const float innerRadius = 0.6;
     const float noiseScale = 0.65;
     
@@ -214,7 +220,10 @@ export default function Orb({
         hover: { value: 0 },
         rot: { value: 0 },
         hoverIntensity: { value: hoverIntensity },
-        backgroundColor: { value: hexToVec3(backgroundColor) }
+        backgroundColor: { value: hexToVec3(backgroundColor) },
+        baseColor1: { value: hexToVec3(color1) },
+        baseColor2: { value: hexToVec3(color2) },
+        baseColor3: { value: hexToVec3(color3) }
       }
     });
 
@@ -281,6 +290,9 @@ export default function Orb({
       }
       program.uniforms.rot.value = currentRot;
       program.uniforms.backgroundColor.value = hexToVec3(backgroundColor);
+      program.uniforms.baseColor1.value = hexToVec3(color1);
+      program.uniforms.baseColor2.value = hexToVec3(color2);
+      program.uniforms.baseColor3.value = hexToVec3(color3);
 
       renderer.render({ scene: mesh });
     };
@@ -294,7 +306,7 @@ export default function Orb({
       container.removeChild(gl.canvas);
       gl.getExtension('WEBGL_lose_context')?.loseContext();
     };
-  }, [hue, hoverIntensity, rotateOnHover, forceHoverState, backgroundColor]);
+  }, [hue, hoverIntensity, rotateOnHover, forceHoverState, backgroundColor, color1, color2, color3]);
 
   return <div ref={ctnDom} className="w-full h-full" />;
 }

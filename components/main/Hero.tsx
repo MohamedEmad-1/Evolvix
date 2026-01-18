@@ -1,13 +1,11 @@
 import React from "react";
 import HeroContent from "../sub/HeroContent";
-import StarsCanvas from "./StarBackground";
 
 interface HeroProps {}
 
 const Hero: React.FC<HeroProps> = () => {
   return (
-    <div className="relative flex flex-col h-full w-full" id="about">
-      <StarsCanvas />
+    <div className="relative flex flex-col h-full w-full" id="about -z-10">
       <video
         autoPlay
         muted
