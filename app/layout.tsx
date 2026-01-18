@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import dynamic from "next/dynamic";
-const StarsCanvas = dynamic(() => import("@/components/Galaxy"), { ssr: false });
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 
@@ -23,21 +21,6 @@ export default function RootLayout({
      <body
         className={`${inter.className} bg-gradient-to-b from-darkb-90 from-0% to-darkb-100 to-30% overflow-y-scroll overflow-x-hidden`}
       >
-        <StarsCanvas
-          className="fixed inset-0 w-full h-screen pointer-events-none"
-          style={{ zIndex: -10 }}
-          starSpeed={0.5}
-          density={1}
-          hueShift={340}
-          speed={0.4}
-          glowIntensity={0.1}
-          saturation={0.4}
-          mouseRepulsion
-          repulsionStrength={0}
-          twinkleIntensity={0}
-          rotationSpeed={0.1}
-          transparent
-        />
         <Navbar />
         {children}
         <Footer />

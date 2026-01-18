@@ -9,6 +9,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 import SkillDataProvider from "../sub/SkillDataProvider";
 import SkillText from "../sub/SkillText";
+import StarsCanvas from "./StarBackground";
 
 const Orb = dynamic(() => import("@/components/Orb"), { ssr: false });
 
@@ -21,6 +22,7 @@ const Skills: React.FC<SkillsProps> = () => {
       className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-80 py-20"
       style={{ transform: "scale(0.9)" }}
     >
+      <StarsCanvas />
       <div className="absolute inset-0 -z-10 pointer-events-none">
         <Orb
           hue={220}
