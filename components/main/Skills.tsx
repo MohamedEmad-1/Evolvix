@@ -75,7 +75,7 @@ const Skills: React.FC<SkillsProps> = () => {
       id="skills"
       className="flex flex-col items-center justify-center gap-12 h-full relative overflow-hidden pb-20 py-20"
     >
-      <div className="absolute h=full inset-0 -z-10 pointer-events-none">
+      <div className="absolute inset-0 -z-10 pointer-events-none w-full h-full">
         <Orb
           hue={0}
           hoverIntensity={1}
@@ -84,7 +84,6 @@ const Skills: React.FC<SkillsProps> = () => {
           color1="#fac852"
           color2="#e6af18"
           color3="#964300"
-          className="w-full h-full"
         />
       </div>
 

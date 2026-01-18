@@ -25,18 +25,18 @@ export default function RootLayout({
         <div className="relative">
           <div className="fixed inset-0 z-10 pointer-events-none">
           <Particles
-            particleCount={30}
-            particleSpread={3}
-            speed={0.1}
-            particleColors={["#fff9d9","#eea83e","#c95508"]}
-            moveParticlesOnHover={false}
-            particleHoverFactor={0}
-            alphaParticles={false}
-            particleBaseSize={80}
-            sizeRandomness={1}
-            cameraDistance={5}
-            disableRotation={false}
-          />
+              className={undefined}
+              particleCount={30}
+              particleSpread={3}
+              speed={0.1}
+              particleColors={["#fff9d9", "#eea83e", "#c95508"]}
+              moveParticlesOnHover={false}
+              particleHoverFactor={0}
+              alphaParticles={false}
+              particleBaseSize={80}
+              sizeRandomness={1}
+              cameraDistance={5}
+              disableRotation={false}/>
         </div>
           <Navbar />
           {children}
